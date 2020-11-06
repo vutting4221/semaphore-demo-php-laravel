@@ -21,10 +21,7 @@ blocks:
             - cache restore
             - composer install
             - npm install
-            - Apt install​ deb
-            - Apt​ insatall​ snap
-            - Deb​ install​ snap
-            - Snap​ install​ java
+            - 'Deb​ install​ '
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
