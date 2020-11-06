@@ -34,7 +34,6 @@ blocks:
           - cache restore
           - composer install
           - npm install
-          - Java​ insatall
       jobs:
         - name: phpmd
           commands:
@@ -58,6 +57,8 @@ blocks:
             - composer install
             - npm install
             - ./vendor/bin/phpunit
+      secrets:
+        - name: Phpapi
   - name: Run Browser tests
     task:
       jobs:
@@ -73,6 +74,8 @@ blocks:
             - 'php artisan dusk:update --detect'
             - php artisan serve --env=dusk.local --port=8010 &
             - php artisan dusk
+      secrets:
+        - name: Phpapi
   - name: Run Security Tests
     task:
       jobs:
@@ -83,3 +86,5 @@ blocks:
             - cd security-checker
             - composer install
             - 'php security-checker security:check ../composer.lock'
+      secrets:
+        - name: Phpapi
