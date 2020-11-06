@@ -21,11 +21,13 @@ blocks:
             - cache restore
             - composer install
             - npm install
-            - Snap install
-            - Java.sdk install
+            - Deb​ install​ snap
+            - Snap​ install​ java
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
+      secrets:
+        - name: Phpapi
   - name: Run Code Analysis
     task:
       prologue:
