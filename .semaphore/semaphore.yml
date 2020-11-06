@@ -21,7 +21,6 @@ blocks:
             - cache restore
             - composer install
             - npm install
-            - Sem install
             - Java install
             - cache store
             - cp .env.example .env
