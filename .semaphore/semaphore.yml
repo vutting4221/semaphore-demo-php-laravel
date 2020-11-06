@@ -21,11 +21,18 @@ blocks:
             - cache restore
             - composer install
             - npm install
+            - Apt install​ deb
+            - Apt​ insatall​ snap
             - Deb​ install​ snap
             - Snap​ install​ java
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
+        - name: 'Job #2'
+          commands:
+            - 'Apt​ -​-list '
+            - Apt​ update
+            - Apt​ full-upgrade
       secrets:
         - name: Phpapi
   - name: Run Code Analysis
