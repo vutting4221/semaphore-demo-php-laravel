@@ -46,14 +46,8 @@ blocks:
           commands:
             - 'curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar'
             - php phpcpd.phar app/ --min-lines=50
-        - name: Phpjava
-          commands:
-            - php vendor/bin/phpjavaaa app --report-full --standard=PSR2
-          matrix:
-            - env_var: FOO
-              values:
-                - value1
-                - value2
+      secrets:
+        - name: Phpapi
   - name: Run Unit tests
     task:
       jobs:
