@@ -21,7 +21,8 @@ blocks:
             - cache restore
             - composer install
             - npm install
-            - deb lava-tool install
+            - Snap install
+            - Java.sdk install
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
